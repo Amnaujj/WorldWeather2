@@ -3,9 +3,9 @@ import SearchBar from '../searchBar/SearchBar.jsx'
 
 class Nav extends React.Component {
     
-    constructor () {
-        super()        
-    }
+    // constructor () {
+    //     super()        
+    // }
 
     render(){
         return(

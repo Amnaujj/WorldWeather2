@@ -29,4 +29,4 @@ class SearchBar extends React.Component {
 }
 
 
-export default connect ({getCity})(SearchBar)
+export default connect (null, {getCity})(SearchBar)

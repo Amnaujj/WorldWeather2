@@ -1,8 +1,8 @@
 
 export const GET_CITY = 'GET_CITY';
 
-const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
+const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
 
 export function getCity (ciudad) {
@@ -33,5 +33,5 @@ export function getCity (ciudad) {
                 }
             }
         )
-    }    
+    }
 }

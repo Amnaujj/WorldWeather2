@@ -9,14 +9,14 @@ export default function Cards() {
     return(
         <div>
             {
-                cities?.map((city) => {
+                cities?.map((city) => 
                     <Card
                         id = {city.id}
                         name = {city.name}
                         min = {city.min}
                         max = {city.max}
                     />
-                })
+                )
             }
         </div>
     )
