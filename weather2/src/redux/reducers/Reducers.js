@@ -1,4 +1,4 @@
-import {GET_INFO} from '../actions/Actions.js'
+import {GET_CITY} from '../actions/Actions.js'
 
 const initialState = {
     Cities: []
@@ -6,7 +6,7 @@ const initialState = {
 
 export default function rootReducer (state = initialState, action) {
     switch (action.type) {
-        case GET_INFO:
+        case GET_CITY:
             return {
                 ...state,
                 Cities: action.payload,

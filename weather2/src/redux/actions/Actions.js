@@ -1,10 +1,11 @@
 
-export const GET_INFO = 'GET_INFO';
+export const GET_CITY = 'GET_CITY';
+
+const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
 
 
-
-export function getInfo (ciudad, apiKey) {
+export function getCity (ciudad) {
 
     return function(dispatch ){
         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
@@ -26,7 +27,7 @@ export function getInfo (ciudad, apiKey) {
                         longitud: i.coord.lon
                     }
                     return dispatch({
-                        type: 'GET_INFO',
+                        type: 'GET_CITY',
                         payload: ciudad
                     })
                 }
