@@ -31,3 +31,7 @@ export default function getCity (city) {
         })
     }
 }
+
+export default function setCity (city) {
+    return
+}
