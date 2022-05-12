@@ -4,11 +4,14 @@ import Card from "../card/Card";
 
 export default function Cards () {
 
-    const state = useSelector((state) => state.cities)
+    const cities = useSelector((state) => state.citiesLoaded);
+    
+    
 
     return (
         <div>
-            {state.map((city) => 
+            {console.log(cities)}
+            {cities && cities?.map((city) => 
                 <Card
                     key={city.id}
                     id={city.id}
@@ -16,7 +19,6 @@ export default function Cards () {
                     min={city.min}
                     name={city.name}
                     img={city.img}
-                    // onClose={() => onClose(city.id)}
                 />
             )}
         </div>

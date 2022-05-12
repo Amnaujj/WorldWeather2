@@ -1,14 +1,16 @@
+export const GET_CITY = 'GET_CITY';
+export const CITY_DETAIL = 'CITY_DETAIL';
+export const DELETE_CITY = 'DELETE_CITY';
 
 const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
-export const GET_CITY = 'GET_CITY';
 
 
-export default function getCity (city) {
+export function getCity (city) {
     return function (dispatch) {
         return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
         .then (i => i.json())
-        .then ((info) => {
+        .then ((info) => {            
             if(info.main !== undefined){
                 const city = {
                 min : Math.round(info.main.temp_min),
@@ -24,7 +26,7 @@ export default function getCity (city) {
                 longitud: info.coord.lon
                 };
                 dispatch({
-                    type: 'GET_CITY',
+                    type: GET_CITY,
                     payload: city
                 })
             } else { alert("ciudad no encontrada") }
@@ -32,6 +34,16 @@ export default function getCity (city) {
     }
 }
 
-export default function setCity (city) {
-    return
+export function cityDetail (city) {
+    return {
+        type: CITY_DETAIL,
+        payload: city
+    }
+}
+
+export function deleteCity (cityId) {
+    return {
+        type: DELETE_CITY,
+        payload: cityId
+    }
 }
