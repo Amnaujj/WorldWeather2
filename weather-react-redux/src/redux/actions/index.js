@@ -1,5 +1,5 @@
 export const GET_CITY = 'GET_CITY';
-export const CITY_DETAIL = 'CITY_DETAIL';
+export const GET_CITY_DETAIL = 'GET_CITY_DETAIL';
 export const DELETE_CITY = 'DELETE_CITY';
 
 const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
@@ -34,9 +34,9 @@ export function getCity (city) {
     }
 }
 
-export function cityDetail (city) {
+export function getCityDetail (city) {
     return {
-        type: CITY_DETAIL,
+        type: GET_CITY_DETAIL,
         payload: city
     }
 }

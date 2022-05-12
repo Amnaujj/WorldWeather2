@@ -1,5 +1,5 @@
-import { useDispatch } from "react-redux"
-import { deleteCity } from '../../redux/actions'
+import { useDispatch } from "react-redux";
+import { deleteCity } from '../../redux/actions';
 
 
 
