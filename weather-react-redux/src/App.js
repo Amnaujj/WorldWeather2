@@ -12,9 +12,9 @@ function App() {
     <div className="App">
 
       <Nav/>
-      <Route exact path='/' component={<Cards/>}/>
-      <Route exact path='/about' component={<About/>}/>
-      <Route exact path='/city/:id' component={<CityDetail/>}/>
+      <Route exact path='/' component={Cards}/>
+      <Route exact path='/about' component={About}/>
+      <Route exact path='/city/:id' component={CityDetail}/>
 
     </div>
   );

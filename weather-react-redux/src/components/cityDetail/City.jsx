@@ -1,18 +1,17 @@
 import React, { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
+import { useParams } from "react-router-dom";
 import { getCityDetail } from "../../redux/actions";
 
 export default function CityDetail () {
 
     const dispatch = useDispatch();
-
-    const city = useSelector((state) => state)
+    const {id} = useParams;
 
     useEffect(() => {
-        console.log(city)
-        const id  = city.match.params.id
+        console.log(id)
         dispatch(getCityDetail(id))
-    },[dispatch,city])
+    },[dispatch,id])
 
     return (
         <div>
