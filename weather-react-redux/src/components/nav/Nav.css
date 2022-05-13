@@ -1,0 +1,19 @@
+.Nav {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    align-items: center;
+}
+
+
+.logo {
+    height: 8vh;
+}
+
+.searchBar{
+
+}
+
+.about {
+}
+
