@@ -10,7 +10,7 @@ export default function Cards () {
 
     return (
         <div>
-            {console.log(cities)}
+            {/* {console.log(cities)} */}
             {cities && cities?.map((city) => 
                 <Card
                     key={city.id}

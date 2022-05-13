@@ -4,7 +4,7 @@ import {Route} from 'react-router-dom';
 import Nav from './components/nav/Nav.jsx'
 import Cards from './components/cards/Cards.jsx';
 import About from './components/about/About.jsx';
-import CityDetail from './components/cityDetail/City.jsx';
+import City from './components/city/City.jsx';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Nav/>
       <Route exact path='/' component={Cards}/>
       <Route exact path='/about' component={About}/>
-      <Route exact path='/city/:id' component={CityDetail}/>
+      <Route exact path='/city/:name' component={City}/>
 
     </div>
   );
